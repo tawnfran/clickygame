@@ -7,4 +7,4 @@ For this assignment, you'll create a memory game with React. This assignment wil
 
 
 # By: Tawny Francis
-# Homework assignment for Penn LPS Bootcamp 
+ Homework assignment for Penn LPS Bootcamp 

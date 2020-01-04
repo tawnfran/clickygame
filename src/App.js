@@ -1,26 +1,26 @@
 import React from 'react';
-import logo from './logo.svg';
+import Card from './components/card';
 import './App.css';
 
-function App() {
+export default function App() {
+  const [flipped, setFlipped] = React.useState([])
+
+  const handleClick = (id) => setFlipped(id)
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h2> Can you memorize where all the cards are?</h2>
+      <Card
+      id={1}
+      width={100}
+      height={100}
+      back={'/img.back.png'}
+      front={'/img.react.png'}
+      flipped={flipped.includes(1)}
+      handleClick={() => handleClick(1)}
+      />
     </div>
   );
 }
 
-export default App;
+

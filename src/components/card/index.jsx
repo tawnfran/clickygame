@@ -6,7 +6,6 @@ import './style.css'
 export default function Card({
   handleClick,
   id,
-  back,
   front,
   height,
   width }) {
@@ -17,7 +16,7 @@ export default function Card({
     }}
     onClick={() => handleClick(id)}
   >
-    <div className="flipper">
+    <div className="pictures">
       <img alt=""
         style={{
           height, width
@@ -34,8 +33,6 @@ export default function Card({
 Card.propTypes = {
   handleClick: PropTypes.func.isRequired,
   id: PropTypes.number.isRequired,
-  flipped: PropTypes.bool.isRequired,
-  back: PropTypes.string.isRequired,
   front: PropTypes.string.isRequired,
   height: PropTypes.number.isRequired,
   width: PropTypes.number.isRequired,

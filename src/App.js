@@ -6,14 +6,30 @@ import data from './data.json';
 class App extends Component {
   state = { data, score: 0, topScore: 0 };
   componentDidMount() {
-    this.setState({data:this.shuffleData(this.state.data)})
+    this.setState({ data: this.shuffleData(this.state.data) })
 
   }
   handleCorrectGuess = newData => {
+    const { topScore, score } = this.state
+    const newScore = score + 1
+    const newTopScore = Math.max(newScore, topScore)
+    this.setState({
+      data: this.shuffleData(newData),
+      score: newScore,
+      topScore: newTopScore,
+    })
 
   }
   handleIncorrectGuess = data => {
+    this.setState({
+      data: this.resetData(data),
+      score: 0
+    })
 
+  }
+  resetData = data => {
+    const resetData = data.map(item => ({ ...item, clicked: false }));
+    return this.shuffleData(resetData);
   }
   shuffleData = data => {
     let i = data.length - 1;
@@ -27,12 +43,25 @@ class App extends Component {
     return data;
   };
   handleItemClick = id => {
+    let guessCorrectly = false;
+    const newData = this.state.data.map(item => {
+      const newItem = { ...item }
+      if (newItem.id === id) {
+        if (!newItem.clicked) {
+          newItem.clicked = true;
+          guessCorrectly = true;
 
+        }
+      }
+      return newItem
+    })
+    guessCorrectly ? this.handleCorrectGuess(newData): this.handleIncorrectGuess(newData)
   }
   render() {
     return (
       <div>
         <h2> Can you memorize where all the cards are?</h2>
+        <h2> Score: {this.state.score} </h2>
         {this.state.data.map(item => (
           <Card
             id={item.id}

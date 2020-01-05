@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "image":"/images/bulls.png",
+    "clicked": false
+  },
+  {
+    "id": 2,
+    "image":"/images/76ers.png",
+    "clicked": false
+  },
+  {
+    "id": 3,
+    "image":"/images/cavs.png",
+    "clicked": false
+  },
+  {
+    "id": 4,
+    "image":"/images/celtics.png",
+    "clicked": false
+  },
+  {
+    "id": 5,
+    "image":"/images/hawks.png",
+    "clicked": false
+  },
+  {
+    "id": 6,
+    "image":"/images/heat.png",
+    "clicked": false
+  },
+  {
+    "id": 7,
+    "image":"/images/hornets.png",
+    "clicked": false
+  },
+  {
+    "id": 8,
+    "image":"/images/lakers.png",
+    "clicked": false
+  },
+  {
+    "id": 9,
+    "image":"/images/mavericks.png",
+    "clicked": false
+  },
+  {
+    "id": 10,
+    "image":"/images/nets.png",
+    "clicked": false
+  },
+  {
+    "id": 11,
+    "image":"/images/nuggets.png",
+    "clicked": false
+  },
+  {
+    "id": 12,
+    "image":"/images/raptors.png",
+    "clicked": false
+  }
+]

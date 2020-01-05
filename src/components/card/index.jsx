@@ -6,14 +6,12 @@ import './style.css'
 export default function Card({
   handleClick,
   id,
-  flipped,
   back,
   front,
   height,
   width }) {
 
   return <div
-    className={`flip-container ${flipped ? 'flipped' : ''}`}
     style={{
       width, height
     }}
@@ -24,8 +22,8 @@ export default function Card({
         style={{
           height, width
         }}
-        className={flipped ? 'front' : 'back'}
-        src={flipped ? front : back}
+        className={"front"}
+        src={front}
       />
 
 

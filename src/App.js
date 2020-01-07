@@ -60,8 +60,9 @@ class App extends Component {
   render() {
     return (
       <div>
-        <h2> Can you memorize where all the cards are?</h2>
-        <h2> Score: {this.state.score} </h2>
+        <h2> Can you remeber which team you've already clicked on?</h2>
+        <h4> Click on each team but don't click the same team twice!</h4>
+        <h3> Score: {this.state.score} </h3>
         {this.state.data.map(item => (
           <Card
             id={item.id}

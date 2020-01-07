@@ -4,6 +4,11 @@ For this assignment, you'll create a memory game with React. This assignment wil
 
 
 # Technologies Used
+HTML
+CSS
+Javascript
+On-click events
+React.js
 
 
 # By: Tawny Francis
